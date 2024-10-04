@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded)
         {
-            if (SwipeManager.swipeUp)
+            if (SwipeManager.swipeUp || Input.GetKeyDown(KeyCode.Space))
                 Jump();
 
             if (SwipeManager.swipeDown && !isSliding)
